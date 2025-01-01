@@ -14,11 +14,11 @@ for TOPO in *.topo; do
 
   # Execute tests
   CMD="python3 ../src/ibtopotool.py -o ${OUTFILE} ${TOPO}";                                $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
-#  CMD="python3 ../src/ibtopotool.py -s -o ${OUTFILE} ${TOPO}";                             $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
-#  CMD="python3 ../src/ibtopotool.py -s --shortlabels -o ${OUTFILE} ${TOPO}";               $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
+  CMD="python3 ../src/ibtopotool.py -s -o ${OUTFILE} ${TOPO}";                             $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
+  CMD="python3 ../src/ibtopotool.py -s --shortlabels -o ${OUTFILE} ${TOPO}";               $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   CMD="python3 ../src/ibtopotool.py -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";                  $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   CMD="python3 ../src/ibtopotool.py -t ${TREEIFY} --shortlabels -o ${OUTFILE} ${TOPO}";    $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
-#  CMD="python3 ../src/ibtopotool.py -s -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";               $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
+  CMD="python3 ../src/ibtopotool.py -s -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";               $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
 #  CMD="python3 ../src/ibtopotool.py -s -t ${TREEIFY} --shortlabels -o ${OUTFILE} ${TOPO}"; $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   CMD="python3 ../src/ibtopotool.py --slurm -o ${OUTFILE} ${TOPO}";                        $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   CMD="python3 ../src/ibtopotool.py --slurm -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";          $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
