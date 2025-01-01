@@ -4,7 +4,6 @@
 - test2.topo: https://jp.fujitsu.com/platform/server/primergy/manual/peripdf/b7fy-2701-02.pdf
 - test3.topo: https://enterprise-support.nvidia.com/s/article/howto-find-the-path-between-two-lids-in-infiniband-network-using-ibdiagpath
   - Note: Assumed '<p style=""> </p>' should translate to empty row delimiting Switch/Ca blocks.
-- test4.topo: https://docs.oracle.com/cd/E19197-01/835-0784-05/z400014e1393438.html
 
 # Howto
 
