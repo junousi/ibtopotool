@@ -19,11 +19,11 @@ for TOPO in *.topo; do
   CMD="python3 ../src/ibtopotool.py -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";                  $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   CMD="python3 ../src/ibtopotool.py -t ${TREEIFY} --shortlabels -o ${OUTFILE} ${TOPO}";    $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   CMD="python3 ../src/ibtopotool.py -s -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";               $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
-#  CMD="python3 ../src/ibtopotool.py -s -t ${TREEIFY} --shortlabels -o ${OUTFILE} ${TOPO}"; $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
+  CMD="python3 ../src/ibtopotool.py -s -t ${TREEIFY} --shortlabels -o ${OUTFILE} ${TOPO}"; $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   CMD="python3 ../src/ibtopotool.py --slurm -o ${OUTFILE} ${TOPO}";                        $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   CMD="python3 ../src/ibtopotool.py --slurm -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";          $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
-#  CMD="python3 ../src/ibtopotool.py --slurm -s -o ${OUTFILE} ${TOPO}";                     $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
-#  CMD="python3 ../src/ibtopotool.py --slurm -s -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";       $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
+  CMD="python3 ../src/ibtopotool.py --slurm -s -o ${OUTFILE} ${TOPO}";                     $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
+  CMD="python3 ../src/ibtopotool.py --slurm -s -t ${TREEIFY} -o ${OUTFILE} ${TOPO}";       $CMD && echo "Success: ${CMD}" || echo "Failure: ${CMD}"
   rm ${TREEIFY}
 done
 
