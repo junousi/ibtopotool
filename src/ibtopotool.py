@@ -168,12 +168,19 @@ def treeify(g, rootfile):
         for nbr in nbrs:
             if g.nodes[n]['rank'] > g.nodes[nbr]['rank']:
                 todel.append((n, nbr))
+    # HACK
+    # At this point g seems to be frozen.
+    # networkx.exception.NetworkXError: Frozen graph can't be modified
     g2 = nx.Graph(g)
     g2.remove_edges_from(todel)
     return g2
 
 def only_switches(g):
     """Filter out nodes that are not switches"""
+    # HACK
+    # This should be based on node type but the lookup didn't seem to
+    # work, at least for some cases. For now let's do the lookup based
+    # on the first letter, though this isn't robust enough for a PR.
     return g.subgraph([n for n in g if n[0] == 'S'])
 
 def relabel_switch_tree(g):
